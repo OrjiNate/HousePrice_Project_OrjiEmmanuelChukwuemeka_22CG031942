@@ -3,7 +3,17 @@ import pandas as pd
 import joblib
 
 # 1. Load the saved model
-model = joblib.load('model/house_price_model.pkl')
+import os
+
+# Get the directory where app.py is located
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+# Construct the path to the model file
+model_path = os.path.join(BASE_DIR, 'model', 'house_price_model.pkl')
+
+# Load the model
+model = joblib.load(model_path)
+
 # Set up the title and description
 st.title("🏡 House Price Prediction System")
 st.write("Input the house features below to get an estimated market price.")
