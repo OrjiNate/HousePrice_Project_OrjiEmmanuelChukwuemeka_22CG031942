@@ -3,8 +3,7 @@ import pandas as pd
 import joblib
 
 # 1. Load the saved model
-model = joblib.load('house_price_model.pkl')
-
+model = joblib.load('model/house_price_model.pkl')
 # Set up the title and description
 st.title("🏡 House Price Prediction System")
 st.write("Input the house features below to get an estimated market price.")
